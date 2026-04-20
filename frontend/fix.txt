@@ -1,0 +1,42 @@
+
+src/components/layouts/SharedTopBar.jsx
+WHAT IS WRONG
+
+You have something like:
+
+<panelIcon />
+
+React thinks it's an HTML tag → ❌ wrong
+WHY THIS ERROR HAPPENS
+
+React rule:
+
+Name	Meaning
+<panelIcon />	HTML tag ❌
+<PanelIcon />	React component ✅
+
+You accidentally created:
+
+lowercase variable → treated like HTML tag → warning
+  // const panelIcon  = panelType === 'admin' ? ShieldCheck : Store
+  const PanelIcon = panelType === 'admin' ? ShieldCheck : Store
+
+//-------out of stock issue
+//backendsrc/model/product.js
+
+
+frontend\src\components\storefrontProductCard.jsx
+
+Problem	File	Exact Fix
+panelIcon error	SharedTopBar.jsx	rename to PanelIcon
+Out of stock bug	productController.js	.lean({ virtuals: true })
+Wrong featured badge	ProductCard.jsx	use product.labels.isFeatured
+Images blocked	server.js/app.js	fix CORS headers
+input warning	VendorSettings.jsx	value ?? ''
+
+
+🔴 FIX 1 — storeSlug can be undefined (THIS causes /store/undefined/...)
+🔴 FIX 2 — inconsistent stock logic (product.inStock vs computed inStock)
+🔴 FIX 3 — add safe fallback for Link
+
+In frontend (ProductCard.jsx), ALWAYS use:
