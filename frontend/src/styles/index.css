@@ -163,6 +163,7 @@
   }
 }
 
+<<<<<<< HEAD
 /* 🔥 Gradient animation */
 @keyframes gradient {
   0%,100% { background-size: 200% 200%; background-position: left center; }
@@ -227,6 +228,8 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+=======
+>>>>>>> 3d114cd (1st commit)
 /* Page transition */
 .page-enter { opacity: 0; transform: translateY(8px); }
 .page-enter-active { opacity: 1; transform: translateY(0); transition: all 0.25s ease-out; }

@@ -18,8 +18,13 @@ export default function SharedTopBar({ onMenuToggle, panelType = 'vendor' }) {
   }, [user])
 
   const panelLabel = panelType === 'admin' ? 'Super Admin' : 'Vendor Dashboard'
+<<<<<<< HEAD
   // const panelIcon  = panelType === 'admin' ? ShieldCheck : Store
   const PanelIcon = panelType === 'admin' ? ShieldCheck : Store
+=======
+  const panelIcon  = panelType === 'admin' ? ShieldCheck : Store
+
+>>>>>>> 3d114cd (1st commit)
   return (
     <header className={`flex items-center justify-between px-6 h-16 flex-shrink-0 border-b ${panelType === 'admin' ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-100'}`}>
       {/* Left: hamburger + breadcrumb */}
@@ -31,9 +36,13 @@ export default function SharedTopBar({ onMenuToggle, panelType = 'vendor' }) {
         )}
         <div className="hidden lg:flex items-center gap-2">
           <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${panelType === 'admin' ? 'bg-indigo-600' : 'bg-indigo-50'}`}>
+<<<<<<< HEAD
             {/*<panelIcon size={14} className={panelType === 'admin' ? 'text-white' : 'text-indigo-600'} />*/}
                <PanelIcon size={14} className={panelType === 'admin' ? 'text-white' : 'text-indigo-600'}
 />
+=======
+            <panelIcon size={14} className={panelType === 'admin' ? 'text-white' : 'text-indigo-600'} />
+>>>>>>> 3d114cd (1st commit)
           </div>
           <span className={`text-sm font-semibold ${panelType === 'admin' ? 'text-gray-300' : 'text-gray-500'}`}>{panelLabel}</span>
         </div>
